@@ -1,0 +1,32 @@
+#slide1{
+  height:30px;
+  width:50px;
+}
+
+#slide {
+    background-color:red;
+    height: 50px;
+    float:right;
+    width:0px;
+    transition:             width 500ms ease;
+        -moz-transition:    width 500ms ease;
+        -ms-transition:     width 500ms ease;
+        -o-transition:      width 500ms ease;
+        -webkit-transition: width 500ms ease;
+}
+
+<div id="slide1">Click</div>
+<div id="slide"></div>
+
+
+<script type="text/javascript">
+
+document.getElementById( 'slide1' ).addEventListener( 'click', function() {
+ var slideer = document.getElementById( 'slide' );
+    ( slideer.style.width == '0px' || slideer.style.width == '' )
+        ? slideer.style.width = '300px' 
+        : slideer.style.width = '0px';
+    
+}, false );
+
+</script>
